@@ -1,1 +1,551 @@
-<!-- Soul Cafe Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Soul Café</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5eee6;
+color:#3e2723;
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:#4e342e;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+}
+
+.logo{
+font-family:'Playfair Display', serif;
+font-size:42px;
+font-weight:700;
+letter-spacing:3px;
+color:#fff3e0;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#d7ccc8;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#8d6e63;
+padding:15px 30px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#6d4c41;
+}
+
+/* GENERAL */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+color:#5d4037;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+line-height:1.8;
+font-size:18px;
+max-width:900px;
+margin:auto;
+}
+
+/* MENU */
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.price{
+color:#6d4c41;
+font-weight:bold;
+font-size:18px;
+margin-top:10px;
+}
+
+/* OFFER */
+
+.offer{
+background:#d7ccc8;
+padding:40px;
+border-radius:15px;
+text-align:center;
+border-left:8px solid #6d4c41;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.offer h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* REVIEWS */
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stars{
+color:gold;
+margin-bottom:10px;
+}
+
+/* HOURS */
+
+.hours{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+line-height:2;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+line-height:2;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#4e342e;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo"> ☕Soul Café</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div>
+<h1>Welcome to Soul Café</h1>
+<p>Where every cup tells a story.</p>
+<a href="#menu" class="btn">Explore Menu</a>
+</div>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+
+<div class="about">
+<p>
+Soul Café is a cozy destination for coffee lovers. We serve handcrafted beverages,
+fresh desserts, and delicious snacks in a warm and welcoming atmosphere.
+Whether you're studying, working, or meeting friends, we make every visit memorable.
+</p>
+</div>
+</section>
+
+<section id="menu">
+<h2>Coffee Menu ☕</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<img src="Espresso.jpg">
+<div class="card-content">
+<h3>Espresso</h3>
+<p>Strong and rich coffee shot.</p>
+<div class="price">₹99</div>
+</div>
+</div>
+
+<div class="card">
+<img src="capucciono.jpg">
+<div class="card-content">
+<h3>Cappuccino</h3>
+<p>Creamy and perfectly balanced.</p>
+<div class="price">₹149</div>
+</div>
+</div>
+
+<div class="card">
+<img src="latte.jpg">
+<div class="card-content">
+<h3>Latte</h3>
+<p>Smooth milk and espresso blend.</p>
+<div class="price">₹169</div>
+</div>
+</div>
+
+<div class="card">
+<img src="cold coffee.jpg">
+<div class="card-content">
+<h3>Cold Coffee</h3>
+<p>Refreshing chilled coffee.</p>
+<div class="price">₹179</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Tea Menu 🍵</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<img src="masalatea.jpg">
+<div class="card-content">
+<h3>Masala Tea</h3>
+<p>Traditional Indian tea with aromatic spices.</p>
+<div class="price">₹79</div>
+</div>
+</div>
+
+<div class="card">
+<img src="greentea.jpg">
+<div class="card-content">
+<h3>Green Tea</h3>
+<p>Refreshing and healthy antioxidant-rich tea.</p>
+<div class="price">₹89</div>
+</div>
+</div>
+
+<div class="card">
+<img src="lemontea.jpg">
+<div class="card-content">
+<h3>Lemon Tea</h3>
+<p>Light and citrusy tea for a refreshing break.</p>
+<div class="price">₹89</div>
+</div>
+</div>
+
+<div class="card">
+<img src="blacktea.jpg">
+<div class="card-content">
+<h3>Black Tea</h3>
+<p>Bold flavor crafted for tea lovers.</p>
+<div class="price">₹69</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Desserts 🍰</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600">
+<div class="card-content">
+<h3>Chocolate Brownie</h3>
+<p>Warm brownie topped with chocolate drizzle.</p>
+<div class="price">₹149</div>
+</div>
+</div>
+
+<div class="card">
+<img src="cheesecake.jpg">
+<div class="card-content">
+<h3>Cheesecake</h3>
+<p>Creamy cheesecake with a buttery crust.</p>
+<div class="price">₹199</div>
+</div>
+</div>
+
+<div class="card">
+<img src="“Red Velvet”.jpg">
+<div class="card-content">
+<h3>Red Velvet Cake</h3>
+<p>Soft, rich, and deliciously sweet.</p>
+<div class="price">₹219</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600">
+<div class="card-content">
+<h3>Tiramisu</h3>
+<p>Classic Italian dessert with coffee flavor.</p>
+<div class="price">₹249</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Snacks 🥪</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600">
+<div class="card-content">
+<h3>Veg Sandwich</h3>
+<p>Fresh vegetables grilled to perfection.</p>
+<div class="price">₹129</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=600">
+<div class="card-content">
+<h3>French Fries</h3>
+<p>Crispy golden fries served hot.</p>
+<div class="price">₹139</div>
+</div>
+</div>
+
+<div class="card">
+<img src="Cheese garlic breads.jpg">
+<div class="card-content">
+<h3>Garlic Bread</h3>
+<p>Toasted bread topped with garlic butter.</p>
+<div class="price">₹119</div>
+</div>
+</div>
+
+<div class="card">
+<img src="cheesetoast.jpg">
+<div class="card-content">
+<h3>Cheese Toast</h3>
+<p>Loaded with melted cheese and herbs.</p>
+<div class="price">₹149</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="offer">
+<h3>☕ Weekend Special Offer</h3>
+<p>Buy 2 Coffees and Get 1 Brownie FREE!</p>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700">
+<img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=700">
+<img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700">
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700">
+
+</div>
+</section>
+
+<section>
+<h2>Customer Reviews</h2>
+
+<div class="review-grid">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>The best cappuccino I've ever had.</p>
+<b>- Harshitha</b>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Cozy atmosphere and delicious desserts.</p>
+<b>- Bunny Wei</b>
+</div>
+
+<div class="review">
+<div class="stars">★★★★☆</div>
+<p>Perfect place for studying and relaxing.</p>
+<b>- Poojitha</b>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Opening Hours</h2>
+
+<div class="hours">
+<p>Monday - Friday: 8:00 AM - 10:00 PM</p>
+<p>Saturday - Sunday: 9:00 AM - 11:00 PM</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact">
+<p>📧 soulcafe@gmail.com</p>
+<p>📞 +91 9876543210</p>
+<p>📍 Hyderabad, India</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Soul Café | Crafted with ❤️</p>
+</footer>
+
+</body>
+</html>
